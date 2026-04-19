@@ -40,6 +40,11 @@ def twoSum(nums,target):#双指针
     if t2>=t1:
         t2+=1
     return [t1,t2] if t1<t2 else [t2,t1]
+def twoSum(nums:list[int],target):
+    for i,e in enumerate(nums):
+        t=target-e
+        if t in nums and i!=nums.index(t):
+            return [i,nums.index(t)]
 
 
 nums=[2,7,11,15]
